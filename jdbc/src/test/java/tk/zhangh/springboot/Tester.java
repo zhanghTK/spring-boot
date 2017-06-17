@@ -1,4 +1,4 @@
-package tk.zhangh.springboot.service;
+package tk.zhangh.springboot;
 
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -11,5 +11,5 @@ import org.springframework.transaction.annotation.Transactional;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
 @Transactional
-public class Tester {
+public abstract class Tester {
 }
