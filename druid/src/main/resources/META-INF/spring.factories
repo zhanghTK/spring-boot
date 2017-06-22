@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+tk.zhangh.springboot.autoconfigure.DruidAutoConfiguration,\
+tk.zhangh.springboot.autoconfigure.DruidMonitorAutoConfiguration,\
+tk.zhangh.springboot.autoconfigure.DruidSpringAopConfiguration

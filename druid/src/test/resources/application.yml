@@ -1,0 +1,40 @@
+druid:
+#   todo 添加数据库url,name,password,
+    url: jdbc:mysql://172.17.147.49:3306/test
+    username: root
+    password: 123456
+    driver-class: com.mysql.jdbc.Driver
+    initial-size: 1
+    min-idle: 1
+    max-active: 20
+    test-on-borrow: true
+    max-wait: 60000
+    time-between-eviction-runs-millis: 60000
+    min-evictable-idle-time-millis: 300000
+    validation-query: SELECT 1 FROM DUAL
+    test-While-Idle: true
+    test-on-return: false
+    pool-prepared-statements: false
+    max-pool-prepared-statement-per-connection-size: 20
+    filters: stat,wall,log4j,config
+#    config.decrypt=true：解码
+#    connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000;config.decrypt=true
+    connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    monitor:
+#         是否启用监控
+          enabled: enabled
+          druid-stat-view: /druid/*
+          druid-web-stat-filter: /*
+          allow: 219.230.50.107,127.0.0.1
+          deny: 219.230.50.108
+          login-username: admin
+          login-password: 123456
+          exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+          reset-enable: false
+          aop-patterns: tk.zhangh.springboot.demo.service.*
+
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
