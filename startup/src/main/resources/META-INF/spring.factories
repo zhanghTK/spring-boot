@@ -1,0 +1,5 @@
+org.springframework.context.ApplicationContextInitializer=\
+tk.zhangh.springboot.startup.initializers.SimpleApplicationContextInitializer
+
+org.springframework.context.ApplicationListener=\
+tk.zhangh.springboot.startup.listeners.SimpleApplicationListener
